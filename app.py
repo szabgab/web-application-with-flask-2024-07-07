@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    return "Hello <b>World!</b>"
+    return 'Hello <b>World!</b> <a href="/echo">time</a> <a href="/echo">echo</a>'
 
 
 @app.route("/time")
