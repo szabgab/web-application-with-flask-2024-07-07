@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 import time
 
 app = Flask(__name__)
@@ -16,10 +16,32 @@ def show_time():
 # http://127.0.0.1:5000/echo?text=hello
 # http://127.0.0.1:5000/echo?text=hello+world%21
 
+# @app.route("/echo")
+# def echo():
+#     app.logger.info(request.args)
+#     text = request.args.get("text")
+
+#     #html = "\n" * 100
+#     html = ""
+#     if text:
+#         html += f"You said <b>{text}</b><hr>"
+    
+#     html = html + """
+# <form>
+# <input name="text">
+# <input type="submit" value="Echo">
+# </form>
+# """
+
+#     return html
+
+
 @app.route("/echo")
 def echo():
     app.logger.info(request.args)
     text = request.args.get("text")
+
+    return render_template("echo.html")
 
     #html = "\n" * 100
     html = ""
