@@ -21,13 +21,15 @@ def echo():
     app.logger.info(request.args)
     text = request.args.get("text")
 
-    html = 
+    html = ""
     if text:
-        return f"You said {text}"
+        html += f"You said <b>{text}</b><hr>"
     
-    return """
+    html = html + """
 <form>
 <input name="text">
 <input type="submit" value="Echo">
 </form>
 """
+
+    return html
