@@ -20,6 +20,8 @@ def show_time():
 def echo():
     app.logger.info(request.args)
     text = request.args.get("text")
+
+    html = 
     if text:
         return f"You said {text}"
     
