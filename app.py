@@ -39,9 +39,11 @@ def show_time():
 @app.route("/echo")
 def echo():
     app.logger.info(request.args)
-    text = request.args.get("text")
-
-    return render_template("echo.html")
+    text_from_user = request.args.get("text")
+    
+    return render_template("echo.html",
+                           text = text_from_user
+                    )
 
     # if text:
     #     html += f"You said <b>{text}</b><hr>"
