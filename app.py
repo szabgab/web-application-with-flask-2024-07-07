@@ -21,6 +21,7 @@ def echo():
     app.logger.info(request.args)
     text = request.args.get("text")
 
+    #html = "\n" * 100
     html = ""
     if text:
         html += f"You said <b>{text}</b><hr>"
