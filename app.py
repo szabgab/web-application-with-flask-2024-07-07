@@ -41,12 +41,8 @@ def echo():
     app.logger.info(request.args)
     text_from_user = request.args.get("text")
     
+    # here comes the business logic
+
     return render_template("echo.html",
                            text = text_from_user
                     )
-
-    # if text:
-    #     html += f"You said <b>{text}</b><hr>"
-    
-
-    # return html

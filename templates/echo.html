@@ -1,7 +1,9 @@
 <h1>Echo</h1>
 
-{{text}}
-<hr>
+{% if text %}
+   You said <b>{{text}}</b>
+   <hr>
+{% endif %}
 
 <form>
 <input name="text">
