@@ -43,16 +43,8 @@ def echo():
 
     return render_template("echo.html")
 
-    #html = "\n" * 100
-    html = ""
-    if text:
-        html += f"You said <b>{text}</b><hr>"
+    # if text:
+    #     html += f"You said <b>{text}</b><hr>"
     
-    html = html + """
-<form>
-<input name="text">
-<input type="submit" value="Echo">
-</form>
-"""
 
-    return html
+    # return html
