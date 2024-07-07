@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 import time
 
 app = Flask(__name__)
@@ -18,6 +18,7 @@ def show_time():
 
 @app.route("/echo")
 def echo():
+    app.logger.info(request.args)
     return """
 <form>
 <input name="text">
