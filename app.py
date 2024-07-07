@@ -10,4 +10,4 @@ def main():
 
 @app.route("/time")
 def show_time():
-    return time.time()
+    return str(time.time())
