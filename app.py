@@ -19,6 +19,10 @@ def show_time():
 @app.route("/echo")
 def echo():
     app.logger.info(request.args)
+    text = request.args.get("text")
+    if text:
+        return f"You said {text}"
+    
     return """
 <form>
 <input name="text">
