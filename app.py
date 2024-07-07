@@ -13,10 +13,14 @@ def show_time():
     return str(time.time())
 
 
+# http://127.0.0.1:5000/echo?text=hello
+# http://127.0.0.1:5000/echo?text=hello+world%21
+
 @app.route("/echo")
 def echo():
     return """
 <form>
 <input name="text">
+<input type="submit" value="Echo">
 </form>
 """
